@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript">
+		function createPerson(name, qq)  //gouzao function
+		var obj=new Object();
+
+		obj.name=name;
+		obj.qq=qq;
+
+		obj.showName=function(){
+			alert('my name:'+this.name);
+		}
+		obj.showQQ=function(){
+			alert('my qq:'+this.qq);
+		}
+		return obj;
+}
+    var obj=createPerson('wkl', '382953038')
+		obj.showName();
+		obj.showQQ();
+
+	var obj2=createPerson('wwl', '41413012')
+	obj2.showName();
+		obj2.showQQ();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

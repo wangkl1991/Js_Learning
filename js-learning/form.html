@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+	window.onload=function(){
+		var oTab=document.getElementById('tab1');
+
+		//alert(oTab.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1].getElementsByTagName('td')[1].innerHTML);
+		alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+		var oldColor='';
+
+		for(var i=0; i<oTab.tBodies[0].rows.length;i++){
+			oTab.tBodies[0].rows[i].onmouseover=function(){
+				oldColor=this.style.background;
+				this.style.background='green';
+			}
+			oTab.tBodies[0].rows[i].onmouseout=function(){
+				this.style.background=oldColor;
+			}
+
+			if(i%2){
+				oTab.tBodies[0].rows[i].style.background=''
+			}
+			else{
+				oTab.tBodies[0].rows[i].style.background='#CCC';
+			}
+		}
+	}
+</script>
+</head>
+<body>
+
+<table id="tab1" border="1" width="500">
+	<thead>
+		<td>ID</td>
+		<td>NAME</td>	
+		<td>age</td>
+
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>wxy</td>
+			<td>25</td>
+		
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>wbd</td>
+			<td>27</td>
+		
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>why</td>
+			<td>23</td>
+		
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

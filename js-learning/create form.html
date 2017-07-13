@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oTab=document.getElementById('tab1');
+			var oBtn=document.getElementById('btn1');
+
+		  	var oAge=document.getElementById('age');
+		  	var oName=document.getElementById('name')
+		  	var id =oTab.tBodies[0].rows.length+1;
+
+		  	oBtn.onclick=function(){
+		  		var oTr=document.createElement('tr');
+
+		  		var oTd=document.createElement('td');
+
+		  		oTd.innerHTML=id++;
+		  		oTr.appendChild(oTd);
+
+		  		var oTd=document.createElement('td');
+
+		  		oTd.innerHTML=oName.value;
+		  		oTr.appendChild(oTd);
+
+		  		var oTd=document.createElement('td');
+
+		  		oTd.innerHTML=oAge.value;
+		  		oTr.appendChild(oTd);
+
+
+		  		var oTd=document.createElement('td');
+
+		  		oTd.innerHTML= '<a href="javascript:;"> remove </a>';
+
+		  		oTr.appendChild(oTd);
+
+		  		oTd.getElementsByTagName('a')[0].onclick=function(){
+		  			oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+		  		}
+
+		  		oTab.tBodies[0].appendChild(oTr);
+		  	};
+		}
+	</script>
+</head>
+<body>
+Name:<input id="name" type="text" />
+Age:<input id="age" type="text" />
+<input id="btn1" type="button" value="add" / >
+<table id="tab1" border="1" width="500">
+	<thead>
+		<td>ID</td>
+		<td>NAME</td>	
+		<td>age</td>
+		<td></td>
+
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>wxy</td>
+			<td>25</td>
+			<td></td>
+		
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>wbd</td>
+			<td>27</td>
+			<td></td>
+		
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>why</td>
+			<td>23</td>
+			<td></td>
+		
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

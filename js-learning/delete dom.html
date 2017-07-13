@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>delete dom</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var aA=document.getElementsByTagName('a');
+			var oUl=document.getElementById('ul1');
+
+			for(var i=0; i<aA.length;i++){
+				aA[i].onclick=function(){
+				oUl.removeChild(this.parentNode);
+			}
+			};
+		}
+	</script>
+</head>
+<body>
+<ul id="ul1">
+	<li>asdsfgad<a href="javascript:;">Delete </a></li>
+	<li>assddsad<a href="javascript:;">Delete</a></li>
+	<li>asdshhjad<a href="javascript:;">Delete</a></li>
+	<li>asdxcsad<a href="javascript:;">Delete</a></li>
+	
+</ul>
+</body>
+</html>
