@@ -1,2 +1,2 @@
-# js_learning
+# js-learning
 learn js
